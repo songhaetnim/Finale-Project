@@ -21,9 +21,8 @@ public class BoardServiceImpl implements BoardService{
 	}
 
 	@Override
-	public List<Board> getBoardList(String btype) {
-		
-		return boardDao.getBoardList(btype);
+	public List<Board> getBoardList(String type, int iid) {
+		return boardDao.getBoardList(type, iid);
 	}
 
 	@Override
@@ -43,4 +42,15 @@ public class BoardServiceImpl implements BoardService{
 		
 	}
 
+	@Override
+	public List<Board> getQnAList() {
+		return boardDao.getQnAList();
+	}
+
+	@Override
+	public List<Board> adminGetQnAList() {
+		return boardDao.adminGetQnAList();
+	}
+	
+	
 }
